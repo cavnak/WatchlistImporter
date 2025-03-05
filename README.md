@@ -1,6 +1,6 @@
 # WatchlistImporter
 
-This tool takes any Letterboxd watchlist and imports it into your universal Plex watchlist.  This works even if the targeted films are not in your library yet (ex: upcoming releases).  
+This .net CORE 8 tool takes any Letterboxd watchlist and imports it into your universal Plex watchlist.  This works even if the targeted films are not in your library yet (ex: upcoming releases).  
 
 You will need two things: a public Letterboxd watchlist (my test account is at https://letterboxd.com/cavnak/watchlist/), and your plex token, which is the link to your universal account.  
 
