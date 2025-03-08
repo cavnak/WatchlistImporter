@@ -11,6 +11,9 @@ using System.Threading.Tasks;
 using static System.Net.Mime.MediaTypeNames;
 using System.Text.Json.Nodes;
 
+using System.Web;
+
+
 class Program
 
  
@@ -118,6 +121,7 @@ class Program
                     var chunkWithTitle= html.Split("title=")[1];
                     var endOfTitle = chunkWithTitle.IndexOf('>');
                     var fullTitleWithYear = chunkWithTitle.Substring(1, endOfTitle - 2);
+                    fullTitleWithYear = HttpUtility.HtmlDecode(fullTitleWithYear);
                     fullTitleWithYear = fullTitleWithYear.Replace('(', ' ').Replace(')', ' ').Trim(); // the plex search algorithm HATES paranthesis (not really but it gives real bonkers search results)
 
                     fullMovieTitlesWithYear.Add(fullTitleWithYear);
